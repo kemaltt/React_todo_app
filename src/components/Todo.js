@@ -5,8 +5,7 @@ export default function Todo({ i, todo, counter, setCounter }) {
 
   const todoDone = () => {
     setIsTodoDone(!isTodoDone);
-
-    setCounter(counter - 1);
+    // setCounter(counter - 1);
   };
 
   return (
