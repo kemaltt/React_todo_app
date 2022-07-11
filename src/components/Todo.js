@@ -17,9 +17,9 @@ export default function Home(props) {
       alert("Please enter a todo");
     }
   };
-  //   useEffect(() => {
-  //     // console.log(todos);
-  //   }, [todos]);
+  useEffect(() => {
+    // console.log(todos);
+  }, [todos]);
 
   return (
     <div className="todo_container">
