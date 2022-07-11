@@ -18,7 +18,7 @@ export default function Home(props) {
     }
   };
   useEffect(() => {
-    console.log(todos);
+    // console.log(todos);
   }, [todos]);
 
   return (
@@ -42,7 +42,13 @@ export default function Home(props) {
       </div>
       <div className="todo_list">
         {todos.map((todo, i) => (
-          <Todo key={i} todo={todo} counter={counter} setCounter={setCounter} />
+          <Todo
+            key={i}
+            todo={todo}
+            todos={todos}
+            counter={counter}
+            setCounter={setCounter}
+          />
         ))}
       </div>
     </div>

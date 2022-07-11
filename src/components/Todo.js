@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 
-export default function Todo({ i, todo, counter, setCounter }) {
+export default function Todo({ i, todo, todos, counter, setCounter }) {
   const [isTodoDone, setIsTodoDone] = useState(true);
 
   const todoDone = () => {
     setIsTodoDone(!isTodoDone);
-    // setCounter(counter - 1);
+    if (isTodoDone) {
+      setCounter(counter - 1);
+    } else {
+      setCounter(counter + 1);
+    }
   };
 
   return (
     <div>
-      <ul style={{}}>
+      <ul>
         <li
           style={{
             textDecoration: !isTodoDone ? "line-through" : "",
